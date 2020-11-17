@@ -5,7 +5,7 @@ export device="hannah"
 export device_is_ab="false"
 
 export kernel="https://github.com/JarlPenguin/android_kernel_motorola_msm8953"
-export branch="rebase"
+export branch="staging/rebase"
 export name="Audio test LineageOS Kernel for hannah"
 export defconfig="hannah_defconfig"
 export clang="false"
