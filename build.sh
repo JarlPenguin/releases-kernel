@@ -17,7 +17,7 @@ if [ "${clang}" == "false" ]; then
 elif [ "${clang}" == "true" ]; then
     export CROSS_COMPILE="${kernel_toolchain}"
     if [ -z "${clang_version}" ]; then
-        export clang_version="r383902b"
+        export clang_version="r412851"
     fi
     if [ "${ARCH}" == "arm64" ]; then
         export PATH="$(pwd)/clang/clang-${clang_version}/bin:$(pwd)/gcc/bin:$(pwd)/gcc32/bin:${PATH}"
