@@ -20,10 +20,10 @@ elif [ "${clang}" == "true" ]; then
         export clang_version="r383902b"
     fi
     if [ "${ARCH}" == "arm64" ]; then
-        export PATH="${PATH}:$(pwd)/clang/clang-${clang_version}/bin:$(pwd)/gcc/bin:$(pwd)/gcc32/bin"
+        export PATH="$(pwd)/clang/clang-${clang_version}/bin:$(pwd)/gcc/bin:$(pwd)/gcc32/bin:${PATH}"
         export CROSS_COMPILE_ARM32="$(pwd)/gcc32/bin/arm-linux-androideabi-"
     else
-        export PATH="${PATH}:$(pwd)/clang/clang-${clang_version}/bin:$(pwd)/gcc/bin"
+        export PATH="$(pwd)/clang/clang-${clang_version}/bin:$(pwd)/gcc/bin:${PATH}"
     fi
 fi
 if [ -z "${name}" ]; then
