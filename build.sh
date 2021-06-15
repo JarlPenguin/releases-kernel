@@ -38,6 +38,7 @@ if [ "${clang}" == "true" ]; then
     make -j$(nproc --all) O=out CC=clang CLANG_TRIPLE="${kernel_clang_triple}"
 else
     mkdir -p out
+    git checkout d9cdf98b9db801b126942a88c4bd3b39d169f879
     make O=out "${defconfig}"
     make O=out -j$(nproc --all)
 fi
